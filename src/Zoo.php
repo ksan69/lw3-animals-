@@ -18,12 +18,12 @@ class Zoo {
      * @param Animal $animal
      * @return void
      */
-    public function addAnimal(Animal $animal) {
+    public function addAnimal(Animal $animal) : void {
         $this->animals[] = $animal;
     }
 
 
-    public function listAnimals() {
+    public function listAnimals() : void {
         foreach ($this->animals as $animal) {
             echo "
 Имя: {$animal->name}
@@ -33,7 +33,7 @@ class Zoo {
         }
     }
 
-    public function animalSounds() {
+    public function animalSounds() : void {
         foreach ($this->animals as $animal) {
             echo $animal->makeSound() . PHP_EOL;
         }
